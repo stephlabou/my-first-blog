@@ -6,8 +6,11 @@
             <div class="date">
                 {{ post.published_date }}
             </div>
-            <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+            <!--post_detail is the name of the view -->
+            <!-- pk is short for primary key-->
+            <!-- post_detail view URl comes from blog/urls.py - make URL in urls.py to point Django to a view named post_detail-->
+              <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+              <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 {% endblock %}

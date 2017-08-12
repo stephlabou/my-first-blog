@@ -27,3 +27,5 @@ see post_list.html for comments
 see blog.css for comments
 
 google fonts and color pick are REALLY COOL
+
+eventually do fix issue of heading links leading nowhere

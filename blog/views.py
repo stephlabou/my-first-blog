@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.utils import timezone
 #import Post - imports Post model
 from .models import Post
+#deal with 404
+from django.shortcuts import render, get_object_or_404
 
 #query to get published posts, ordered by published date
 #where 'posts' is the same of this query set
@@ -16,3 +18,8 @@ def post_list(request):
 
     #request comes in, checks dates of posts - sends to page post_list.html
     #those are the posts that are returned (rendered)
+
+#post_detail view defined here
+def post_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'blog/post_detail.html', {'post': post})
