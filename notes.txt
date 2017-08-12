@@ -1,0 +1,11 @@
+make changes locally
+see how it looks on 127.xxxxx url
+push to github
+sync python anywhere
+stephlabou.pythonanywhere.com is the live site
+
+where did my created posts go?
+not yet accessible from live site - only through admin view
+
+started putting some comments in .py files
+should've started earlier...but have some notes in 'views.py'
