@@ -29,3 +29,5 @@ see blog.css for comments
 google fonts and color pick are REALLY COOL
 
 eventually do fix issue of heading links leading nowhere
+
+see post_detail.html and blog/urls.py
