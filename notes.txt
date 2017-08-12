@@ -9,3 +9,21 @@ not yet accessible from live site - only through admin view
 
 started putting some comments in .py files
 should've started earlier...but have some notes in 'views.py'
+
+confused about how local syncs with pyanywhere - it doesn't seem to in terms of posts
+
+OK! local content WILL NOT TRANSFER TO GITHUB/PYTHONANYWHERE
+Local posts are local
+when push/pull git/pyanywhere, all that's going is the STRUCTURE of the web page
+(e.g., the template and model and whatnot) but not the *content*
+you wouldn't develop content (e.g., posts) on local because they won't sync to live page
+these have been examples about getting FORMAT/STRUCTURE to match/mirror
+but not content - the databases local and live are different, they won't sync
+
+those links in posts don't redirect to anything, 
+I don't get why the tutorial made those headings links...
+
+see post_list.html for comments 
+see blog.css for comments
+
+google fonts and color pick are REALLY COOL

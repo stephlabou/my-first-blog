@@ -1,0 +1,40 @@
+<!-- This is how to make a comment in html-->
+<!--points to css specification in blog.css file-->
+{% load staticfiles %}
+<html>
+    <head>
+      <title>Django Girls blog</title>
+      <!--points to Bootstrap stuff to format-->
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <!-- import font Lobster' from Google Fonts-->
+      <!-- this does need to come before pointing to css specifications in other file-->
+      <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+      <!-- seeing if I can import another font...yes I can! click + on the font, then click family selected, copy code-->
+      <!--<link href="//fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css">-->
+      <link href="//fonts.googleapis.com/css?family=Dancing+Script|Gentium+Basic" rel="stylesheet", type="text/css">
+      <!--points to css specification in blog.css file--->
+      <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+      <!-- name header portion of code-->
+      <div class="page-header">
+          <h1><a href="/">Django Girls Blog</a></h1>
+      </div>
+      <div class="content container">
+          <div class="row">
+              <div class="col-md-8">
+                  {% for post in posts %}
+                      <div class="post">
+                          <div class="date">
+                              <p>published: {{ post.published_date }}</p>
+                          </div>
+                          <h1><a href="">{{ post.title }}</a></h1>
+                          <p>{{ post.text|linebreaksbr }}</p>
+                      </div>
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+    </body>
+</html>
